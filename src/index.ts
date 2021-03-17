@@ -17,8 +17,7 @@ import { startApi } from "./api";
 const main = async () => {
     const orm = await MikroORM.init(mikroConfig);
     await orm.getMigrator().up();
-    const data = await orm.em.find(Tree, {});
-    console.log(data);
+
     startApi(8888);
 }
 

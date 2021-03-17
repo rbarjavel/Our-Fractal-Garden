@@ -4,7 +4,6 @@ import { Request, Response } from "express";
 export const startApi = (port: number) => {
     const app = express();
 
-
     app.get('/Tree', (req: Request, rep: Response) => {
         console.log(req.headers);
         rep.send('hello world');

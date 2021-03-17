@@ -1,26 +1,29 @@
 import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
+import { Guid } from "guid-typescript";
 
 @Entity()
 export class Tree {
-
   @PrimaryKey()
-  _id!: number;
+  id!: Number;
 
-  @Property({type: 'date'})
+  @Property({ type: "text" })
+  guid: Guid = Guid.create();
+
+  @Property({ type: "date" })
   createdAt: Date = new Date();
 
-  @Property({type: 'date', onUpdate: () => new Date() })
+  @Property({ type: "date", onUpdate: () => new Date() })
   updatedAt: Date = new Date();
 
   @Property()
   name!: string;
 
-  @Property({type: 'text'})
+  @Property({ type: "text" })
   branchs!: string;
 
-  @Property({type: 'text'})
+  @Property({ type: "text" })
   colors!: string;
 
-  @Property({type: 'text'})
+  @Property({ type: "text" })
   songs!: string;
 }

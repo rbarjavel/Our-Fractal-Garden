@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "guid-typescript": "^1.0.9",
     "mikro-orm": "^4.4.4"
   }
 }
