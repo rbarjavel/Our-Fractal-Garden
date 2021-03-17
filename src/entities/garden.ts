@@ -1,7 +1,7 @@
 import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
 
 @Entity()
-export class Tree {
+export class Garden {
 
   @PrimaryKey()
   _id!: number;
@@ -15,12 +15,12 @@ export class Tree {
   @Property()
   name!: string;
 
-  @Property({type: 'text'})
-  branchs!: string;
+  @Property()
+  meta!: string;
 
   @Property({type: 'text'})
-  colors!: string;
+  plants!: string;
 
   @Property({type: 'text'})
-  songs!: string;
+  user!: string;
 }
