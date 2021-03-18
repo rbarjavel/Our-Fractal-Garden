@@ -18,6 +18,12 @@ export class Tree {
   @Property()
   name!: string;
 
+  @Property()
+  position!: string;
+
+  @Property()
+  pattern!: string;
+
   @Property({ type: "text" })
   branchs!: string;
 
@@ -26,4 +32,5 @@ export class Tree {
 
   @Property({ type: "text" })
   songs!: string;
+
 }

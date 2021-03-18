@@ -12,13 +12,11 @@ import { startApi } from "./api";
 // })
 // await orm.em.persistAndFlush(data)
 
-
-
 const main = async () => {
     const orm = await MikroORM.init(mikroConfig);
     await orm.getMigrator().up();
 
-    startApi(8888);
+    startApi(8888, orm);
 }
 
 main().catch((error) => {
